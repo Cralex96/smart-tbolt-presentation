@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Thesis Presentation</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/appearance.css">		
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -37,12 +38,24 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: false,
 				hash: true,
 				dependencies: [
+					{ src: 'node_modules/highlight.js/lib/highlight.js' },
+					{
+						src: 'node_modules/reveal-code-focus/reveal-code-focus.js',
+						async: true,
+						callback: function() {
+							RevealCodeFocus();
+						}
+					},
+					{ src: 'node_modules/reveal.js-toolbar/toolbar.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/transit/transit.js', async: false },
+					{ src: 'plugin/appearance/appearance.js', async: false }
 				]
 			});
 		</script>
