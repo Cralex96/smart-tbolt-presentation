@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../font/product-sans/Product-Sans-Regular.ttf");
+}
+
+* {
+	font-family: 'Product Sans', sans-serif !important;
+}
+
+.reveal .slides > section {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 95%;
+}
+
+#presentation.present {
+	justify-content: space-between;
+}
+
+#authors {
+	font-size: .8em;
+}
+
+#footer {
+	font-size: .7em;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#mathLogo {
+	border: none !important;
+	box-shadow: none !important;
+	width: 20rem;
+}
+
+#yachayLogo {
+	border: none !important;
+	box-shadow: none !important;
+	width: 20rem;
+}
+
+.titleContainer {
+	display: flex;
+	justify-content: left;
+	width: 100%;
+	padding-left: 3em;
+}
+
+#agendaContent {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.agendaItem {
+	display: flex;
+	position: relative;
+	background-color: aqua;
+	width: 50%;
+	border-radius: 40px;
+	margin: .7rem 0;
+	font-size: .6em;
+	visibility: hidden;
+}
+
+.agendaItem .itemText {
+	padding: .9rem 1em;
+}
+
+.agendaItem .itemIcon {
+	display: flex;
+	position: absolute;
+	right: 0;
+	justify-content: center;
+	align-items: center;
+	background-color: #222222;
+	border-radius: 50%;
+	color: white;
+	width: 3em;
+	height: 3em;
+	border: 3px solid white;
+	font-size: .8em;
+	transform: translateY(-2px);
+}
+
+#item1.agendaItem {
+	margin-left: 4em;
+}
+
+#item2.agendaItem {
+	margin-left: 7em;
+}
+
+#item3.agendaItem {
+	margin-left: 10em;
+}
+
+#item4.agendaItem {
+	margin-left: 13em;
+}
+
+#item5.agendaItem {
+	margin-left: 16em;
+}
+
+#item6.agendaItem {
+	margin-left: 19em;
+}
+
+#item7.agendaItem {
+	margin-left: 22em;
+}

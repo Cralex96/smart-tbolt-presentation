@@ -8,11 +8,22 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<link rel="stylesheet" href="lib/css/appearance.css">		
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/animate.css">
+		<link rel="stylesheet" href="lib/css/appearance.css">	
+		<link rel="stylesheet" href="lib/css/styles.css">
+		<link rel="stylesheet" href="lib/css/fontawesome.min.css">
+		<link rel="stylesheet" href="lib/css/brands.min.css">
+		<link rel="stylesheet" href="lib/css/regular.min.css">
+		<link rel="stylesheet" href="lib/css/solid.min.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<script src="lib/js/fontawesome.min.js"></script>
+		<script src="lib/js/brands.min.js"></script>
+		<script src="lib/js/regular.min.js"></script>
+		<script src="lib/js/solid.min.js"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -26,8 +37,94 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Slide 1 -->
+				<section id="presentation">
+					<div id="header">
+						<img src="lib/images/math_logo.png" alt="School of Mathematics Logo" id="mathLogo">
+						<img src="lib/images/yachay_logo.png" alt="Yachay Tech Logo" id="yachayLogo">
+					</div>
+					<h4>Triage system design for traffic accidents medical emergency patients using neural networks techniques</h4>
+					<div id="authors">
+						<p><b>Author:</b> Cristopher Alexis Dávila Urresta</p>
+						<p><b>Adviser:</b> Lorena de los Ángeles Guachi</p>
+					</p>
+					<div id="footer">
+						<p>Urcuquí - Ecuador</p>
+						<p id="date"></p>
+					</div>
+				</section>
+
+				<!-- Slide 2 -->
+				<section>
+					<div class="titleContainer">
+						<h3 class="animated bounceInLeft">Agenda</h3>
+					</div>
+					<div id="agendaContent">
+						<div id="item1" class="agendaItem">
+							<span class="itemText">Introduction: </span>
+							<span class="itemIcon"><i class="far fa-lightbulb"></i></span>
+						</div>
+						<div id="item2" class="agendaItem">
+							<span class="itemText">Objectives</span>
+							<span class="itemIcon"><i class="fas fa-bullseye"></i></span>
+						</div>
+						<div id="item3" class="agendaItem">
+							<span class="itemText">Theoretical Framework</span>
+							<span class="itemIcon"><i class="far fa-file-alt"></i></span>
+						</div>
+						<div id="item4" class="agendaItem">
+							<span class="itemText">Methodology</span>
+							<span class="itemIcon"><i class="fas fa-cogs"></i></span>
+						</div>
+						<div id="item5" class="agendaItem">
+							<span class="itemText">Experimental Set-Up</span>
+							<span class="itemIcon"><i class="fas fa-wrench"></i></span>
+						</div>
+						<div id="item6" class="agendaItem">
+							<span class="itemText">Results and Discussion</span>
+							<span class="itemIcon"><i class="fas fa-poll"></i></span>
+						</div>
+						<div id="item7" class="agendaItem">
+							<span class="itemText">Conclusions and Future Work</span>
+							<span class="itemIcon"><i class="fas fa-clipboard-list"></i></span>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 3 -->
+				<section>
+					<h3 class="animated flipInX">Introduction</h3>
+				</section>
+
+				<!-- Slide 4 -->
+				<section>
+					<h3>Objectives</h3>
+				</section>
+
+				<!-- Slide 5 -->
+				<section>
+					<h3>Theoretical Framework</h3>
+				</section>
+
+				<!-- Slide 6 -->
+				<section>
+					<h3>Methodology</h3>
+				</section>
+
+				<!-- Slide 7 -->
+				<section>
+					<h3>Experimental Set-Up</h3>
+				</section>
+
+				<!-- Slide 8 -->
+				<section>
+					<h3>Results and Discussion</h3>
+				</section>
+
+				<!-- Slide 9 -->
+				<section>
+					<h3>Conclusions and Future Work</h3>
+				</section>
 			</div>
 		</div>
 
@@ -38,8 +135,15 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				display: 'flex',
+				width: '75%',
+				height: '80%',
+				transitionSpeed: 'fast',
 				controls: false,
 				hash: true,
+				appearance: {
+					hideagain: false
+				},
 				dependencies: [
 					{ src: 'node_modules/highlight.js/lib/highlight.js' },
 					{
@@ -49,7 +153,6 @@
 							RevealCodeFocus();
 						}
 					},
-					{ src: 'node_modules/reveal.js-toolbar/toolbar.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
@@ -59,5 +162,7 @@
 				]
 			});
 		</script>
+
+		<script src="lib/js/main.js"></script>
 	</body>
 </html>
