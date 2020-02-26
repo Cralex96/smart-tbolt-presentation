@@ -7,6 +7,21 @@
 	font-family: 'Product Sans', sans-serif !important;
 }
 
+h5 {
+	font-size: 24pt;
+}
+
+.reveal .slides section .fragment.highlight-underline,
+.reveal .slides section .fragment.highlight-current-underline {
+  opacity: 1;
+	visibility: inherit;
+}
+
+.reveal .slides section .fragment.highlight-underline.visible {
+	text-decoration: underline;
+	transform: scale(1.2);
+}
+
 .reveal .slides > section {
 	flex-direction: column;
 	justify-content: center;
@@ -62,11 +77,10 @@
 	display: flex;
 	position: relative;
 	background-color: aqua;
-	width: 50%;
+	width: 53%;
 	border-radius: 40px;
 	margin: .7rem 0;
 	font-size: .6em;
-	visibility: hidden;
 }
 
 .agendaItem .itemText {
@@ -115,4 +129,114 @@
 
 #item7.agendaItem {
 	margin-left: 22em;
+}
+
+.fixedTitle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.video-animations {
+	max-width: none !important;
+	max-height: none !important;
+	object-fit: fill;
+	min-width: 80vw;
+	min-height: 80vh;
+}
+
+#triageIssues {
+	position: absolute;
+	left: 0;
+	padding-left: 7%;
+	transform: translateY(-3rem);
+}
+
+.chartContainer {
+	height: 90%;
+	width: 90%;
+}
+
+.leftTitle {
+	display: flex;
+	justify-content: start;
+	width: 100%;
+}
+
+#generalObjective {
+	text-align: left;
+	font-size: 24pt;
+	margin-bottom: 3em;
+}
+
+#specificObjectives > li {
+	font-size: 24pt;
+}
+
+#triageScalesTitle {
+	display: flex;
+	position: absolute;
+	top: 0;
+	padding-top: 3em;
+}
+
+.square {
+	height: 30px;
+	width: 30px;
+	margin: 0 1.5em;
+}
+
+.bg-red {
+	background-color: red;
+}
+
+.bg-orange {
+	background-color: orange;
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.bg-green {
+	background-color: green;
+}
+
+.bg-blue {
+	background-color: blue;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.justify-between {
+	justify-content: space-between !important;
+}
+
+.align-center {
+	align-items: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+#experiment1-1Table > thead {
+	font-size: 22pt;
+}
+
+#experiment1-1Table > tbody {
+	font-size: 20pt;
+}
+
+#experiment1-1Table td,
+#experiment1-1Table th {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.text-left {
+	width: 100%;
+	text-align: left;
 }

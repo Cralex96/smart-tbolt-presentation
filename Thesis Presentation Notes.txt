@@ -1,0 +1,13 @@
+Good morning everyone. It's an honor for me that all of you are here and I am very excited to be able to show you a project to which I've dedicated a lot of time and effort.
+Many of you must have ever known emergency services in hospitals. In practically all, a patient classification process is carried out called Triage.
+But what is triage? Well, this process consists of classifying patients according to their symptoms, vital signs and available resources at medical center in emergency levels. 
+These levels are based on standardized scales that are generally based on 5 levels. Once the patient's symptoms are collected, the corresponding level of urgency is assigned. 
+After the level of urgency is assigned, the patient must be treated within a maximum time specified according to level and scale. But, what happens when there are too many
+people waiting to be taken care of? Many of these people have to wait too long to endure pain, even when their level of urgency is high. This usually happens in the case of
+traffic accidents, because on certain occasions there is a massive accident where several people are affected, saturating the emergency service.
+In 2019, traffic accidents in Ecuador have remained at very high numbers ranging from 1600 to 2200 accidents in a month. 	For this reason, I've wanted
+study a possible solution to this problem. My name is Cristopher Davila and my thesis topic is TRIAGE SYSTEM DESIGN FOR TRAFFIC ACCIDENTS MEDICAL EMERGENCY PATIENTS USING
+NEURAL NETWORKS TECHNIQUES.
+
+
+

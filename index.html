@@ -38,6 +38,37 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- Slide 1 -->
+				<section>
+					<h4>Thesis Defense</h4>
+				</section>
+
+				<section data-background-video="lib/videos/Triage 1.mp4" data-background-video-loop=true>
+					<h3 class="fixedTitle">What is Triage?</h3>
+				</section>
+
+				<section data-transition="fade" data-background-video="lib/videos/Triage 2.mp4" data-background-video-loop=true>
+					<h3 class="fixedTitle">What is Triage?</h3>
+				</section>
+
+				<section data-transition="fade" data-background-video="lib/videos/Triage 3.mp4" data-background-video-loop=true>
+					<h3 class="fixedTitle">What is Triage?</h3>
+				</section>
+
+				<section data-transition="fade" data-background-video="lib/videos/Triage 4.mp4" data-background-video-loop=true>
+					<ul id="triageIssues">
+						<li class="fragment fade-right">Long waiting time</li>
+						<li class="fragment fade-right">Long time to determine<br>the urgency level</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>High demand for traffic accidents in Ecuador 2019</h4>
+					<div class="chartContainer">
+						<canvas data-chart="line" data-chart-src="lib/csv/traffic_accidents_2019.csv"></canvas>
+					</div>
+				</section>
+
+				<!-- Slide 3 -->
 				<section id="presentation">
 					<div id="header">
 						<img src="lib/images/math_logo.png" alt="School of Mathematics Logo" id="mathLogo">
@@ -54,76 +85,281 @@
 					</div>
 				</section>
 
-				<!-- Slide 2 -->
-				<section>
+				<section id="agenda">
 					<div class="titleContainer">
 						<h3 class="animated bounceInLeft">Agenda</h3>
 					</div>
 					<div id="agendaContent">
-						<div id="item1" class="agendaItem">
-							<span class="itemText">Introduction: </span>
+						<div id="item1" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Introduction:</b> Motivation, Scope, Contribution</span>
 							<span class="itemIcon"><i class="far fa-lightbulb"></i></span>
 						</div>
-						<div id="item2" class="agendaItem">
-							<span class="itemText">Objectives</span>
+						<div id="item2" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Objectives:</b> General and Specifics</span>
 							<span class="itemIcon"><i class="fas fa-bullseye"></i></span>
 						</div>
-						<div id="item3" class="agendaItem">
-							<span class="itemText">Theoretical Framework</span>
+						<div id="item3" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Theoretical Framework:</b> Triage Scales, Related Works</span>
 							<span class="itemIcon"><i class="far fa-file-alt"></i></span>
 						</div>
-						<div id="item4" class="agendaItem">
-							<span class="itemText">Methodology</span>
+						<div id="item4" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Methodology:</b> Data Collection, Implementation, Testing</span>
 							<span class="itemIcon"><i class="fas fa-cogs"></i></span>
 						</div>
-						<div id="item5" class="agendaItem">
-							<span class="itemText">Experimental Set-Up</span>
+						<div id="item5" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Experimental Set-Up:</b> Metrics and Experiments Performed</span>
 							<span class="itemIcon"><i class="fas fa-wrench"></i></span>
 						</div>
-						<div id="item6" class="agendaItem">
-							<span class="itemText">Results and Discussion</span>
+						<div id="item6" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Results and Discussion</b></span>
 							<span class="itemIcon"><i class="fas fa-poll"></i></span>
 						</div>
-						<div id="item7" class="agendaItem">
-							<span class="itemText">Conclusions and Future Work</span>
+						<div id="item7" class="agendaItem fragment fade-right">
+							<span class="itemText"><b>Conclusions and Future Work</b></span>
 							<span class="itemIcon"><i class="fas fa-clipboard-list"></i></span>
 						</div>
 					</div>
 				</section>
 
-				<!-- Slide 3 -->
 				<section>
-					<h3 class="animated flipInX">Introduction</h3>
+					<h3 class="animated bounceInUp">Introduction</h3>
 				</section>
 
 				<!-- Slide 4 -->
 				<section>
-					<h3>Objectives</h3>
+					<h3 class="animated bounceInUp">Objectives</h3>
+				</section>
+
+				<section>
+					<div class="leftTitle animated bounceInLeft">
+						<h4>General Objective</h4>
+					</div>
+					<p id="generalObjective" class="fragment fade-right">
+						To <b>design a prototype</b> of a triage system for <b>determining</b> the <b>patient critical level</b> in traffic accidents emergency services by using <b>neural networks techniques</b>.
+					</p>
+					<div class="leftTitle fragment fade-right">
+						<h4>Specific Objectives</h4>
+					</div>
+					<ul id="specificObjectives">
+						<li class="fragment fade-right">
+							To <b>define attributes</b> that determine the patient condition.
+						</li>
+						<li class="fragment fade-right">
+							To <b>design a neural network architecture</b> to categorize patients with <b>traffic accidents</b> according to their level of urgency of care.
+						</li>
+						<li class="fragment fade-right">
+							To <b>implement the proposed approach</b> using adequate hardware and software.
+						</li>
+						<li class="fragment fade-right">
+							To <b>measure the efficiency</b> achieved by the proposed approach in terms of <b>sensitivity, specificity, accuracy percentage</b> and <b>execution time</b>.
+						</li>
+					</ul>
 				</section>
 
 				<!-- Slide 5 -->
 				<section>
-					<h3>Theoretical Framework</h3>
+					<h3 class="animated bounceInUp">Theoretical Framework</h3>
+				</section>
+
+				<section>
+					<h4 id="triageScalesTitle" class="animated bounceInUp">Triage Scales</h4>
+					<ul>
+						<li class="fragment fade-up">Australasian Triage Scale (ATS)</li>
+						<li class="fragment fade-up">Canadian Triage and Acuity Scale (CTAS)</li>
+						<li class="fragment fade-up">Emergency Severity Index (ESI)</li>
+						<li class="fragment fade-up">
+							<span class="fragment highlight-blue">Manchester Triage Scale (MTS)</span>
+						</li>
+					</ul>
+				</section>
+
+				<section data-transition="fade">
+					<h4>Manchester Triage Scale (MTS)</h4>
+					<table>
+						<thead>
+							<tr>
+								<th>Scale Category</th>
+								<th>Maximum Time of Attention</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="d-flex align-center justify-between">MTS 1: Inmediate <div class="square bg-red"></div></td>
+								<td class="text-right">0 minutes</td>
+							</tr>
+							<tr>
+								<td class="d-flex align-center justify-between">MTS 2: Very Urgent <div class="square bg-orange"></div></td>
+								<td class="text-right">10 minutes</td>
+							</tr>
+							<tr>
+								<td class="d-flex align-center justify-between">MTS 3: Urgent <div class="square bg-yellow"></div></td>
+								<td class="text-right">60 minutes</td>
+							</tr>
+							<tr>
+								<td class="d-flex align-center justify-between">MTS 4: Standard <div class="square bg-green"></div></td>
+								<td class="text-right">120 minutes</td>
+							</tr>
+							<tr>
+								<td class="d-flex align-center justify-between">MTS 5: Non-urgent <div class="square bg-blue"></div></td>
+								<td class="text-right">240 minutes</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 
 				<!-- Slide 6 -->
 				<section>
-					<h3>Methodology</h3>
+					<h3 class="animated bounceInUp">Methodology</h3>
 				</section>
 
 				<!-- Slide 7 -->
 				<section>
-					<h3>Experimental Set-Up</h3>
+					<h3 class="animated bounceInUp">Experimental Set-Up</h3>
 				</section>
 
 				<!-- Slide 8 -->
 				<section>
-					<h3>Results and Discussion</h3>
+					<h3 class="animated bounceInUp">Results and Discussion</h3>
+				</section>
+
+				<section>
+					<h4>Neural Network Experiments</h4>
+					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
+					<div class="chartContainer">
+						<canvas data-chart="line" data-chart-src="lib/csv/experiment1-1.csv">
+						<!--
+						{
+							"data": {
+								"datasets": [
+									{ "fill": false },
+									{ "fill": false }
+								]
+							},
+							"options": {
+								"responsive": true,
+								"scales": {
+									"xAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Epochs"
+										}
+									}],
+									"yAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Accuracy (%)"
+										}
+									}]
+								}
+							}
+						}
+						-->
+						</canvas>
+					</div>
+				</section>
+
+				<section>
+					<h4>Neural Network Experiments</h4>
+					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
+					<table id="experiment1-1Table">
+						<thead>
+							<tr>
+								<th>Test N°</th>
+								<th>Learning Rate</th>
+								<th>Epochs</th>
+								<th>Loss</th>
+								<th>Training Data<br>Accuracy</th>
+								<th>Test Data<br>Accuracy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>0.01</td>
+								<td>500</td>
+								<td>0.1594</td>
+								<td>41.03%</td>
+								<td>25.00%</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>0.01</td>
+								<td>1000</td>
+								<td>0.0091</td>
+								<td>94.87%</td>
+								<td>75.00%</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>0.005</td>
+								<td>1500</td>
+								<td>0.0518</td>
+								<td>92.31%</td>
+								<td>25.00%</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>0.005</td>
+								<td>2000</td>
+								<td>0.0042</td>
+								<td>97.44%</td>
+								<td>25.00%</td>
+							</tr>
+							<tr class="fragment highlight-blue" data-fragment-index="1">
+								<td>5</td>
+								<td>0.001</td>
+								<td>2500</td>
+								<td class="fragment highlight-underline">0.0092</td>
+								<td>97.44%</td>
+								<td>75.00%</td>
+							</tr>
+							<tr class="fragment highlight-blue" data-fragment-index="1">
+								<td>6</td>
+								<td>0.001</td>
+								<td>3000</td>
+								<td>0.0207</td>
+								<td>97.44%</td>
+								<td>75.00%</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>0.0005</td>
+								<td>3500</td>
+								<td>0.0104</td>
+								<td>97.44%</td>
+								<td>50.00%</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>0.0005</td>
+								<td>4000</td>
+								<td>0.0515</td>
+								<td>92.31%</td>
+								<td>50.00%</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>0.0001</td>
+								<td>4500</td>
+								<td>0.0693</td>
+								<td>89.74%</td>
+								<td>25.00%</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>0.0001</td>
+								<td>5000</td>
+								<td>0.0492</td>
+								<td>92.31%</td>
+								<td>50.00%</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 
 				<!-- Slide 9 -->
 				<section>
-					<h3>Conclusions and Future Work</h3>
+					<h3 class="animated bounceInUp">Conclusions and Future Work</h3>
 				</section>
 			</div>
 		</div>
@@ -144,6 +380,11 @@
 				appearance: {
 					hideagain: false
 				},
+				chart: {
+					line: {
+						borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
+					}
+				},
 				dependencies: [
 					{ src: 'node_modules/highlight.js/lib/highlight.js' },
 					{
@@ -158,7 +399,9 @@
 					{ src: 'plugin/highlight/highlight.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/transit/transit.js', async: false },
-					{ src: 'plugin/appearance/appearance.js', async: false }
+					{ src: 'plugin/appearance/appearance.js', async: false },
+					{ src: 'plugin/chart/Chart.min.js' },				
+					{ src: 'plugin/chart/csv2chart.js' }
 				]
 			});
 		</script>
