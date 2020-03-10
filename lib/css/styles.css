@@ -3,12 +3,74 @@
   src: url("../font/product-sans/Product-Sans-Regular.ttf");
 }
 
+@font-face {
+	font-family: 'MathJax';
+  src: url("../../node_modules/mathjax/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff");
+}
+
 * {
 	font-family: 'Product Sans', sans-serif !important;
 }
 
+img {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.imageContainer {
+	position: relative;
+	margin-top: 1em;
+	height: 100%;
+}
+
+#level1Percentage,
+#level2Percentage, 
+#level3Percentage,
+#level4Percentage,
+#level5Percentage {
+	position: absolute;
+	font-size: 10pt;
+	font-weight: bold;
+	right: 17.1em;
+}
+
+#level1Percentage {
+	top: 9.2em;
+}
+
+#level2Percentage {
+	top: 13.6em;
+}
+
+#level3Percentage {
+	top: 18em;
+}
+
+#level4Percentage {
+	top: 22.4em;
+}
+
+#level5Percentage {
+	top: 26.8em;
+}
+
+.oval {
+	position: absolute;
+	top: 50.5%;
+	right: 3.3%;
+	z-index: 20;
+	border-radius: 50%;
+	border: 2px solid #E9473D;
+	width: 10%;
+	height: 5%;
+}
+
 h5 {
 	font-size: 24pt;
+}
+
+h6 {
+	font-size: 22pt;
 }
 
 .reveal .slides section .fragment.highlight-underline,
@@ -29,16 +91,121 @@ h5 {
 	height: 95%;
 }
 
+.nameContainer {
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.personDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.personName {
+	background-color: #AC2B26;
+	color: #eeeeee;
+	font-size: 16pt;
+	padding: 5px 20px 5px 120px;
+	text-align: left;
+	transform: skewY(-10deg) rotate(10deg);
+}
+
+.personPosition {
+	background: #E9473D;
+	width: 300px;
+	color: rgb(77, 25, 24);
+	font-size: 16pt;
+	padding: 5px 20px 5px 120px;
+	text-align: left;
+	font-style: italic;
+	transform: skewY(-10deg) rotate(10deg) translateX(-6.5px);
+}
+
+.avatarImage {
+	position: absolute;
+	z-index: 10;
+	left: 10px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	border: 2px solid !important;
+	border-color: #E9473D !important;
+	margin: 0 !important;
+	max-width: none !important;
+	max-height: none !important;
+}
+
 #presentation.present {
 	justify-content: space-between;
 }
 
 #authors {
-	font-size: .8em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 }
 
 #footer {
+	width: 100%;
 	font-size: .7em;
+}
+
+#additionalResultsSection {
+	align-items: flex-start;
+}
+
+#additionalResultsSection > h5 {
+	width: 65% !important;
+}
+
+.tables {
+	display: flex;
+	width: 100%;
+	justify-content: space-between !important;
+	margin: auto;
+}
+
+.resultsTable td {
+	text-align: center !important;
+	font-size: 25pt;
+}
+
+.resultsTable > thead {
+	font-weight: bold;
+}
+
+.resultsTable > tfoot {
+	font-weight: bold;
+}
+
+#reasonsForConsultation {
+	width: 80%;
+	text-align: left;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+#traditionalAndModern > thead td {
+	text-align: center;
+	font-weight: bold;
+}
+
+#traditionalAndModern td {
+	vertical-align: middle;
+}
+
+#thanksSection {
+	justify-content: center;
+}
+
+.bottom {
+	display: flex;
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #header {
@@ -153,7 +320,7 @@ h5 {
 }
 
 .chartContainer {
-	height: 90%;
+	height: 100%;
 	width: 90%;
 }
 
@@ -163,14 +330,30 @@ h5 {
 	width: 100%;
 }
 
+.pros {
+	color: #4285F4;
+}
+
+.cons {
+	color: #DB4437;
+}
+
 #generalObjective {
 	text-align: left;
 	font-size: 24pt;
 	margin-bottom: 3em;
 }
 
+#generalObjective b {
+	color: #4285F4;
+}
+
 #specificObjectives > li {
 	font-size: 24pt;
+}
+
+#specificObjectives > li b {
+	color: #4285F4;
 }
 
 #triageScalesTitle {
@@ -231,12 +414,146 @@ h5 {
 }
 
 #experiment1-1Table td,
-#experiment1-1Table th {
+#experiment1-1Table th,
+#experiment1-2Table td,
+#experiment1-2Table th,
+#experiment2Table th,
+#experiment2Table td {
 	text-align: center;
 	vertical-align: middle;
+}
+
+#experiment1-2Table > thead {
+	font-size: 16pt;
+}
+
+#experiment1-2Table > tbody {
+	font-size: 14pt;
 }
 
 .text-left {
 	width: 100%;
 	text-align: left;
+}
+
+#tensorflowCharacteristics > li {
+	list-style: none;
+}
+
+#computerCharacteristics td {
+	vertical-align: middle;
+}
+
+.pl-7 {
+	padding-left: 7em !important;
+}
+
+.pl-1 {
+	padding-left: 1em !important;
+}
+
+.mt-2 {
+	margin-top: 2em !important;
+}
+
+.topText {
+	position: absolute;
+	top: 0;
+}
+
+.linkedinColor {
+	color: #0077B5;
+}
+
+.githubColor {
+	color: #24292E;
+}
+
+#flutterCharacteristics > li {
+	color: #4285F4;
+}
+
+#introduction > div {
+	display: flex;
+}
+
+#introduction > div > ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 60%;
+}
+
+#introduction > div > #images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 40%;
+	height: 50vh;
+}
+
+#introduction > div > #images > img {
+	position: absolute;
+	background-color: red;
+	height: 90%;
+	width: 100%;
+	border-radius: 20px;
+	border-color: transparent !important;
+	box-shadow: 10px 10px 23px -10px rgba(0,0,0,0.75) !important;
+	margin: 0 !important;
+}
+
+#introduction li b {
+	color: #4285F4;
+}
+
+.sectionIdentifier {
+	border-radius: 20px;
+	position: absolute;
+	right: -20px;
+	top: 20px;
+	padding: 5px 15px;
+	font-size: 15pt;
+	color: white;
+}
+
+.introductionMark {
+	background-color: #4285F4;
+}
+
+.objectivesMark {
+	background-color: #DB4437;
+}
+
+.theoreticalMark {
+	background-color: #F4B400;
+}
+
+.methodologyMark {
+	background-color: #0F9D58;
+}
+
+.experimentalMark {
+	background-color: #4285F4;
+}
+
+.resultsMark {
+	background-color: #DB4437;
+}
+
+.conclusionsMark {
+	background-color: #F4B400;
+}
+
+.equation * {
+	font-family: 'MathJax' !important;
+	font-size: 18pt;
+}
+
+.equations {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: auto;
 }

@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="lib/css/brands.min.css">
 		<link rel="stylesheet" href="lib/css/regular.min.css">
 		<link rel="stylesheet" href="lib/css/solid.min.css">
+		<link rel="stylesheet" href="bower_components/font-awesome-animation/dist/font-awesome-animation.min.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -24,6 +25,7 @@
 		<script src="lib/js/brands.min.js"></script>
 		<script src="lib/js/regular.min.js"></script>
 		<script src="lib/js/solid.min.js"></script>
+		<script id="MathJax-script" async src="node_modules/mathjax/es5/tex-mml-chtml.js"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -39,7 +41,7 @@
 			<div class="slides">
 				<!-- Slide 1 -->
 				<section>
-					<h4>Thesis Defense</h4>
+					<h3>Thesis Defense</h3>
 				</section>
 
 				<section data-background-video="lib/videos/Triage 1.mp4" data-background-video-loop=true>
@@ -74,12 +76,24 @@
 						<img src="lib/images/math_logo.png" alt="School of Mathematics Logo" id="mathLogo">
 						<img src="lib/images/yachay_logo.png" alt="Yachay Tech Logo" id="yachayLogo">
 					</div>
-					<h4>Triage system design for traffic accidents medical emergency patients using neural networks techniques</h4>
-					<div id="authors">
-						<p><b>Author:</b> Cristopher Alexis Dávila Urresta</p>
-						<p><b>Adviser:</b> Lorena de los Ángeles Guachi</p>
-					</p>
+					<h4>Triage system design for traffic accidents medical emergency patients using neural network techniques</h4>
 					<div id="footer">
+						<div id="authors">
+							<div class="nameContainer">
+								<img src="lib/images/author.jpg" class="avatarImage animated bounceIn slow" alt="Author"></img>
+								<div class="personDetails">
+									<span class="personName animated fadeInLeft faster">Cristopher Alexis Dávila Urresta</span>
+									<span class="personPosition animated fadeInRight faster">Author</span>
+								</div>
+							</div>
+							<div class="nameContainer">
+								<img src="lib/images/adviser.jpg" class="avatarImage animated bounceIn slow" alt="Adviser"></img>
+								<div class="personDetails">
+									<span class="personName animated fadeInLeft faster">Lorena de los Ángeles Guachi</span>
+									<span class="personPosition animated fadeInRight faster">Adviser</span>
+								</div>
+							</div>
+						</div>
 						<p>Urcuquí - Ecuador</p>
 						<p id="date"></p>
 					</div>
@@ -91,64 +105,94 @@
 					</div>
 					<div id="agendaContent">
 						<div id="item1" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Introduction:</b> Motivation, Scope, Contribution</span>
+							<span class="itemText"><b>1. Introduction:</b> Contribution</span>
 							<span class="itemIcon"><i class="far fa-lightbulb"></i></span>
 						</div>
 						<div id="item2" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Objectives:</b> General and Specifics</span>
+							<span class="itemText"><b>2. Objectives:</b> General and Specifics</span>
 							<span class="itemIcon"><i class="fas fa-bullseye"></i></span>
 						</div>
 						<div id="item3" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Theoretical Framework:</b> Triage Scales, Related Works</span>
+							<span class="itemText"><b>3. Theoretical Framework:</b> Triage Scales, Related Works</span>
 							<span class="itemIcon"><i class="far fa-file-alt"></i></span>
 						</div>
 						<div id="item4" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Methodology:</b> Data Collection, Implementation, Testing</span>
+							<span class="itemText"><b>4. Methodology:</b> Data Collection, Implementation, Testing</span>
 							<span class="itemIcon"><i class="fas fa-cogs"></i></span>
 						</div>
 						<div id="item5" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Experimental Set-Up:</b> Metrics and Experiments Performed</span>
+							<span class="itemText"><b>5. Experimental Set-Up:</b> Metrics and Experiments Performed</span>
 							<span class="itemIcon"><i class="fas fa-wrench"></i></span>
 						</div>
 						<div id="item6" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Results and Discussion</b></span>
+							<span class="itemText"><b>6. Results and Discussion</b></span>
 							<span class="itemIcon"><i class="fas fa-poll"></i></span>
 						</div>
 						<div id="item7" class="agendaItem fragment fade-right">
-							<span class="itemText"><b>Conclusions and Future Work</b></span>
+							<span class="itemText"><b>7. Conclusions and Future Work</b></span>
 							<span class="itemIcon"><i class="fas fa-clipboard-list"></i></span>
 						</div>
 					</div>
 				</section>
 
 				<section>
-					<h3 class="animated bounceInUp">Introduction</h3>
+					<h3 class="animated bounceInUp">1. Introduction</h3>
+				</section>
+
+				<section id="introduction">
+					<div class="sectionIdentifier introductionMark">
+						1. Introduction
+					</div>
+					<h4 class="text-left animated bounceInDown">1.1. Contribution</h4>
+					<div>
+						<ul>
+							<li class="fragment fade-up" data-fragment-index="1">
+								Develop a <b>mobile application</b> to <b>collect</b> patient symptoms and <b>classify</b> them.
+							</li>
+							<li class="fragment fade-up" data-fragment-index="2">
+								Use <b>artificial neural network</b> to determine the <b>patient critical level</b>.
+							</li>
+							<li class="fragment fade-up" data-fragment-index="3">
+								Focused on <b>traffic accidents</b>.
+							</li>
+						</ul>
+						<div id="images">
+							<img src="lib/images/mobile_app.gif" alt="Mobile App" class="fragment fade-in-then-out" data-fragment-index="1">
+							<img src="lib/images/artificial_intelligence.gif" alt="Artificial Intelligence" class="fragment fade-in-then-out" data-fragment-index="2">
+							<img src="lib/images/accident.gif" alt="Traffic Accident" class="fragment fade-in-then-out" data-fragment-index="3">
+						</div>
+
+					</div>
+					
 				</section>
 
 				<!-- Slide 4 -->
 				<section>
-					<h3 class="animated bounceInUp">Objectives</h3>
+					<h3 class="animated bounceInUp">2. Objectives</h3>
 				</section>
 
 				<section>
+					<div class="sectionIdentifier objectivesMark">
+						2. Objectives
+					</div>
 					<div class="leftTitle animated bounceInLeft">
-						<h4>General Objective</h4>
+						<h4>2.1. General Objective</h4>
 					</div>
 					<p id="generalObjective" class="fragment fade-right">
-						To <b>design a prototype</b> of a triage system for <b>determining</b> the <b>patient critical level</b> in traffic accidents emergency services by using <b>neural networks techniques</b>.
+						To <b>design a prototype</b> of a triage system for determining the <b>patient critical level</b> in <b>traffic accidents</b> emergency services by using <b>neural networks techniques</b>.
 					</p>
 					<div class="leftTitle fragment fade-right">
-						<h4>Specific Objectives</h4>
+						<h4>2.2. Specific Objectives</h4>
 					</div>
 					<ul id="specificObjectives">
 						<li class="fragment fade-right">
-							To <b>define attributes</b> that determine the patient condition.
+							To <b>define attributes</b> that determine the <b>patient condition</b>.
 						</li>
 						<li class="fragment fade-right">
-							To <b>design a neural network architecture</b> to categorize patients with <b>traffic accidents</b> according to their level of urgency of care.
+							To <b>design a neural network</b> architecture to <b>categorize patients</b> with traffic accidents according to their <b>level of urgency</b> of care.
 						</li>
 						<li class="fragment fade-right">
-							To <b>implement the proposed approach</b> using adequate hardware and software.
+							To <b>implement</b> the proposed approach using <b>adequate hardware and software</b>.
 						</li>
 						<li class="fragment fade-right">
 							To <b>measure the efficiency</b> achieved by the proposed approach in terms of <b>sensitivity, specificity, accuracy percentage</b> and <b>execution time</b>.
@@ -158,11 +202,14 @@
 
 				<!-- Slide 5 -->
 				<section>
-					<h3 class="animated bounceInUp">Theoretical Framework</h3>
+					<h3 class="animated bounceInUp">3. Theoretical Framework</h3>
 				</section>
 
 				<section>
-					<h4 id="triageScalesTitle" class="animated bounceInUp">Triage Scales</h4>
+					<div class="sectionIdentifier theoreticalMark">
+						3. Theoretical Framework
+					</div>
+					<h4 id="triageScalesTitle" class="animated bounceInDown">3.1. Triage Scales</h4>
 					<ul>
 						<li class="fragment fade-up">Australasian Triage Scale (ATS)</li>
 						<li class="fragment fade-up">Canadian Triage and Acuity Scale (CTAS)</li>
@@ -174,8 +221,11 @@
 				</section>
 
 				<section data-transition="fade">
-					<h4>Manchester Triage Scale (MTS)</h4>
-					<table>
+					<div class="sectionIdentifier theoreticalMark">
+						3. Theoretical Framework
+					</div>
+					<h4 class="animated bounceInDown">Manchester Triage Scale (MTS)</h4>
+					<table class="fragment fade">
 						<thead>
 							<tr>
 								<th>Scale Category</th>
@@ -207,61 +257,261 @@
 					</table>
 				</section>
 
+				<section>
+					<div class="sectionIdentifier theoreticalMark">
+						3. Theoretical Framework
+					</div>
+					<h4>Manchester Triage Scale (MTS)</h4>
+					<ul id="reasonsForConsultation">
+						<li class="fragment fade-up" data-fragment-index="1">
+							Asthma
+						</li>
+						<li class="fragment fade-up" data-fragment-index="2">
+							Back Pain
+						</li>
+						<li class="fragment fade-up" data-fragment-index="3">
+							Diabetes
+						</li>
+						<li class="fragment fade-up" data-fragment-index="4">
+							<div class="fragment highlight-blue" data-fragment-index="7">
+								Major Trauma
+							</div>
+						</li>
+						<li class="fragment fade-up" data-fragment-index="5">
+							<div class="fragment highlight-blue" data-fragment-index="7">
+								Abdominal Pain
+							</div>
+						</li>
+						<li class="fragment fade-up" data-fragment-index="6">
+							... and more
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier theoreticalMark">
+						3. Theoretical Framework
+					</div>
+					<h4 class="animated bounceInDown">3.2. Traditional Triage and Modern Triage</h4>
+					<table id="traditionalAndModern">
+						<thead>
+							<tr>
+								<td>Traditional Triage</td>
+								<td>Modern Triage</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<ul>
+										<li>Using Questionnaries</li>
+										<li>Via Telephone</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>Artificial Neural Networks</li>
+										<li>Bayesian Networks</li>
+										<li>Decision Trees</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Manual approach without technical features and has low precision.</td>
+								<td>Automated process reducing classification time, requiring a training process to predict triage level.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
 				<!-- Slide 6 -->
 				<section>
-					<h3 class="animated bounceInUp">Methodology</h3>
+					<h3 class="animated bounceInUp">4. Methodology</h3>
 				</section>
 
-				<!-- Slide 7 -->
-				<section>
-					<h3 class="animated bounceInUp">Experimental Set-Up</h3>
-				</section>
-
-				<!-- Slide 8 -->
-				<section>
-					<h3 class="animated bounceInUp">Results and Discussion</h3>
+				<section data-transition="fade">
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4 class="animated bounceInDown">4.1. Thesis Stages</h4>
+					<img height="80%" src="lib/images/thesis_stages.png" alt="Thesis Stages" class="animated fadeIn">
 				</section>
 
 				<section>
-					<h4>Neural Network Experiments</h4>
-					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
-					<div class="chartContainer">
-						<canvas data-chart="line" data-chart-src="lib/csv/experiment1-1.csv">
-						<!--
-						{
-							"data": {
-								"datasets": [
-									{ "fill": false },
-									{ "fill": false }
-								]
-							},
-							"options": {
-								"responsive": true,
-								"scales": {
-									"xAxes": [{
-										"scaleLabel": {
-											"display": true,
-											"labelString": "Epochs"
-										}
-									}],
-									"yAxes": [{
-										"scaleLabel": {
-											"display": true,
-											"labelString": "Accuracy (%)"
-										}
-									}]
-								}
-							}
-						}
-						-->
-						</canvas>
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4 class="animated bounceInDown">4.1.1. Data Collection</h4>
+					<h5 class="text-left animated bounceInLeft">Triage Scale</h5>
+					<p class="text-left fragment fade-up">Manchester Triage Scale</p>
+					<h5 class="text-left fragment fade-right mt-2">Dataset</h5>
+					<ul class="text-left">
+						<li class="fragment fade-up">28 discriminators based on MTS</li>
+						<li class="fragment fade-up">5 vital signs</li>
+						<li class="fragment fade-up">Age</li>
+						<li class="fragment fade-up">Gender</li>
+						<li class="fragment fade-up">Reason for consultation</li>
+						<li class="fragment fade-up">Triage level</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4 class="animated bounceInDown">4.1.2. Neural Network Model</h4>
+					<div class="imageContainer animated fadeIn" data-fragment-index="1">
+						<img src="lib/images/neural_network_model.png" alt="Neural Network Model">
+						<span id="level1Percentage" class="fragment fade" data-fragment-index="2">0.08</span>
+						<span id="level2Percentage" class="fragment fade" data-fragment-index="2">0.02</span>
+						<span id="level3Percentage" class="fragment fade" data-fragment-index="2">0.16</span>
+						<span id="level4Percentage" class="fragment fade" data-fragment-index="2">0.94</span>
+						<span id="level5Percentage" class="fragment fade" data-fragment-index="2">0.33</span>
+						<div class="oval fragment fade" data-fragment-index="3"></div>
 					</div>
 				</section>
 
 				<section>
-					<h4>Neural Network Experiments</h4>
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4 class="animated bounceInDown">4.1.3. Hardware and Software Tools</h4>
+					<h5 class="text-left animated bounceInLeft">Tensorflow</h5>
+					<ul id="tensorflowCharacteristics">
+						<li class="fragment fade-right pros"><b>+</b> <b>High performance</b> and matching <b>the best</b> in the industry.</li>
+						<li class="fragment fade-right pros"><b>+</b> Excelent community support.</li>
+						<li class="fragment fade-right pros"><b>+</b> Training progress <b>monitoring</b> and <b>tracking</b> several metrics.</li>
+						<li class="fragment fade-right cons"><b>-</b> Only support <b>NVIDIA GPUs</b> and the only full language support of <b>Python</b>.</li>
+						<li class="fragment fade-right cons"><b>-</b> Steep learning curve.</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4>4.1.3. Hardware and Software Tools</h4>
+					<h5 class="text-left animated bounceInLeft">Computer Used for Development</h5>
+					<table id="computerCharacteristics" class="fragment fade">
+						<tbody>
+							<tr>
+								<td><b>Brand</b></td>
+								<td>MSI</td>
+							</tr>
+							<tr>
+								<td><b>CPU</b></td>
+								<td>Intel® Core™ i7-8750H, 2.20 GHz,<br>6 cores and 12 logical processors.</td>
+							</tr>
+							<tr>
+								<td><b>GPU</b></td>
+								<td>GeForce® GTX 1060 with 6GB GDDR5</td>
+							</tr>
+							<tr>
+								<td><b>RAM</b></td>
+								<td>16 GB</td>
+							</tr>
+							<tr>
+								<td><b>OS</b></td>
+								<td>Windows 10 Home</td>
+							</tr>
+							<tr>
+								<td><b>System Type</b></td>
+								<td>64-bit Operating System</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier methodologyMark">
+						4. Methodology
+					</div>
+					<h4 class="topText mt-2">4.1.3. Hardware and Software Tools</h4>
+					<h5 class="text-left pl-7 animated bounceInLeft">Flutter</h5>
+					<ul id="flutterCharacteristics">
+						<li class="fragment fade-right">Uses Dart</li>
+						<li class="fragment fade-right">Develop for iOS and Android from a <b>single codebase</b>.</li>
+						<li class="fragment fade-right">Do more with <b>less code</b>.</li>
+						<li class="fragment fade-right">Hot Reload</li>
+						<li class="fragment fade-right">Native App Performance</li>
+					</ul>
+				</section>
+
+				<!-- Slide 7 -->
+				<section>
+					<h3 class="animated bounceInUp">5. Experimental Set-Up</h3>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier experimentalMark">
+						5. Experimental Set-Up
+					</div>
+					<h4 class="animated bounceInDown">5.1. Performance Metrics</h4>
+					<div class="equations">
+						<div>
+							<h5 class="animated bounceInLeft">Accuracy</h5>
+							<p class="animated bounceInLeft equation">\[Classified Patients \over Total Patients\]</p>
+							<h5 class="animated bounceInLeft">Sensitivity</h5>
+							<p class="animated bounceInLeft equation">\[True Positive \over True Positive + False Negative\]</p>
+						</div>
+						<div>
+							<h5 class="animated bounceInLeft">Specificity</h5>
+							<p class="animated bounceInLeft equation">\[True Negative \over True Negative + False Positive\]</p>
+							<h5 class="animated bounceInLeft">Execution Time</h5>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>5.2. Experiment 1: Parameter Settings</h4>
+					<h5 class="text-left">Experiment 1.1</h5>
+					<ul class="text-left">
+						<li>10 tests</li>
+						<li>Learning Rate</li>
+						<li>Epochs</li>
+					</ul>
+					<h5 class="text-left" style="margin: auto;">Experiment 1.2</h5>
+					<ul class="text-left">
+						<li>7 tests</li>
+						<li>Hidden Neurons</li>
+						<li>Activation Functions</li>
+						<li>Loss Function</li>
+						<li>Optimizer</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>5.3. Experiment 2: Specificity and Sensitivity Metrics</h4>
+					<ul style="margin:auto">
+						<li>True Positives</li>
+						<li>True Negatives</li>
+						<li>False Positives</li>
+						<li>False Negatives</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>5.4. Experiment 3: Execution Time</h4>
+					<ul style="margin: auto;">
+						<li>4 Tests</li>
+						<li>Milliseconds</li>
+						<li>Development Computer</li>
+						<li>Google Cloud Server</li>
+					</ul>
+				</section>
+
+				<!-- Slide 8 -->
+				<section>
+					<h3 class="animated bounceInUp">6. Results and Discussion</h3>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4 class="animated bounceInDown">6.1. Neural Network Experiments</h4>
 					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
-					<table id="experiment1-1Table">
+					<table id="experiment1-1Table" class="fragment fade" data-fragment-index="1">
 						<thead>
 							<tr>
 								<th>Test N°</th>
@@ -305,7 +555,7 @@
 								<td>97.44%</td>
 								<td>25.00%</td>
 							</tr>
-							<tr class="fragment highlight-blue" data-fragment-index="1">
+							<tr class="fragment highlight-blue" data-fragment-index="2">
 								<td>5</td>
 								<td>0.001</td>
 								<td>2500</td>
@@ -313,7 +563,7 @@
 								<td>97.44%</td>
 								<td>75.00%</td>
 							</tr>
-							<tr class="fragment highlight-blue" data-fragment-index="1">
+							<tr class="fragment highlight-blue" data-fragment-index="2">
 								<td>6</td>
 								<td>0.001</td>
 								<td>3000</td>
@@ -357,10 +607,366 @@
 					</table>
 				</section>
 
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.1. Neural Network Experiments</h4>
+					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
+					<div class="chartContainer">
+						<canvas height="130%" data-chart="line" data-chart-src="lib/csv/experiment1-1.csv">
+						<!--
+						{
+							"data": {
+								"datasets": [
+									{ "fill": false },
+									{ "fill": false }
+								]
+							},
+							"options": {
+								"responsive": true,
+								"scales": {
+									"xAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Epochs"
+										}
+									}],
+									"yAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Accuracy (%)"
+										}
+									}]
+								}
+							}
+						}
+						-->
+						</canvas>
+					</div>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.1. Neural Network Experiments</h4>
+					<h5 class="text-left">Experiment 1: Parameter Settings</h5>
+					<table id="experiment1-2Table" class="fragment fade" data-fragment-index="1">
+						<thead>
+							<tr>
+								<th>Test N°</th>
+								<th>Hidden Neurons</th>
+								<th>Hidden Activation Function</th>
+								<th>Output Activation Function</th>
+								<th>Loss Function</th>
+								<th>Optimizer</th>
+								<th>Training Data Accuracy</th>
+								<th>Test Data Accuracy</th>
+								<th>Loss</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment highlight-blue" data-fragment-index="2">
+								<td>1</td>
+								<td>16</td>
+								<td>relu</td>
+								<td>sigmoid</td>
+								<td>mean squared error</td>
+								<td>adam</td>
+								<td>97.44%</td>
+								<td>75.00%</td>
+								<td class="fragment highlight-underline">0.0092</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>5</td>
+								<td>relu</td>
+								<td>sigmoid</td>
+								<td>mean squared error</td>
+								<td>adam</td>
+								<td>89.74%</td>
+								<td>75.00%</td>
+								<td>0.0695</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>30</td>
+								<td>relu</td>
+								<td>sigmoid</td>
+								<td>mean squared error</td>
+								<td>adam</td>
+								<td>84.62%</td>
+								<td>50.00%</td>
+								<td>0.0736</td>
+							</tr>
+							<tr class="fragment highlight-blue" data-fragment-index="2">
+								<td>4</td>
+								<td>16</td>
+								<td>sigmoid</td>
+								<td>sigmoid</td>
+								<td>mean squared error</td>
+								<td>adam</td>
+								<td>97.44%</td>
+								<td>75.00%</td>
+								<td>0.0368</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>16</td>
+								<td>relu</td>
+								<td>tanh</td>
+								<td>mean squared error</td>
+								<td>adam</td>
+								<td>82.05%</td>
+								<td>25.00%</td>
+								<td>0.7</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>16</td>
+								<td>relu</td>
+								<td>sigmoid</td>
+								<td>binary crossentropy</td>
+								<td>adam</td>
+								<td>48.72%</td>
+								<td>25.00%</td>
+								<td>0.0424</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>16</td>
+								<td>relu</td>
+								<td>sigmoid</td>
+								<td>mean squared error</td>
+								<td>adadelta</td>
+								<td>25.64%</td>
+								<td>50.00%</td>
+								<td>0.5222</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.1. Neural Network Experiments</h4>
+					<h5 class="text-left animated bounceInLeft">Experiment 2: Precision Metrics</h5>
+					<table id="experiment2Table" class="fragment fade">
+						<thead>
+							<tr>
+								<th>Metric</th>
+								<th>Training Data</th>
+								<th>Validation Data</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Specificity</td>
+								<td>97.44%</td>
+								<td>50%</td>
+							</tr>
+							<tr>
+								<td>Sensitivity</td>
+								<td>99.36%</td>
+								<td>87.50%</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.1. Neural Network Experiments</h4>
+					<h5 class="text-left animated bounceInLeft">Experiment 3: Execution Time</h5>
+					<div class="tables">
+						<table class="resultsTable">
+							<thead>
+								<tr><td colspan="2">Model on MSI Laptop</td></tr>
+								<tr>
+									<td>Test N°</td>
+									<td>Execution Time (ms)</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>294</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>310</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>271</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>333</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>Average Time:</td>
+									<td>302</td>
+								</tr>
+							</tfoot>
+						</table>
+						<table class="resultsTable">
+							<thead>
+								<tr><td colspan="2">Model on Google Cloud Server</td></tr>
+								<tr>
+									<td>Test N°</td>
+									<td>Execution Time (ms)</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>511</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>473</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>502</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>522</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>Average Time:</td>
+									<td>502</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.1. Neural Network Experiments</h4>
+					<h5 class="text-left animated bounceInLeft">Experiment 3: Execution Time</h5>
+					<div class="chartContainer">
+						<canvas height="130%" data-chart="line" data-chart-src="lib/csv/experiment3.csv">
+						<!--
+						{
+							"data": {
+								"datasets": [
+									{ "fill": false },
+									{ "fill": false }
+								]
+							},
+							"options": {
+								"responsive": true,
+								"scales": {
+									"xAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Test N°"
+										}
+									}],
+									"yAxes": [{
+										"scaleLabel": {
+											"display": true,
+											"labelString": "Execution Time (ms)"
+										}
+									}]
+								}
+							}
+						}
+						-->
+						</canvas>
+					</div>
+				</section>
+
+				<section id="additionalResultsSection">
+					<div class="sectionIdentifier resultsMark">
+						6. Results and Discussion
+					</div>
+					<h4>6.2. Additional Results</h4>
+					<h5 class="text-left">Mobile Application Prototype for Automatic Triage Process</h5>
+				</section>
+
 				<!-- Slide 9 -->
 				<section>
-					<h3 class="animated bounceInUp">Conclusions and Future Work</h3>
+					<h3 class="animated bounceInUp">7. Conclusions and Future Work</h3>
 				</section>
+
+				<section>
+					<div class="sectionIdentifier conclusionsMark">
+						7. Conclusions
+					</div>
+					<h4>7.1. Conclusions</h4>
+					<p>The use of artificial intelligence to <b>improve patient care</b> in medical centers is undoubtedly a very important step to improve people’s <b>quality of life</b>.</p>
+					<ul style="margin: auto;">
+						<li>The attributes to determine the condition of the patients are based on the <b>reasons for consultation</b> and <b>discriminators</b> of MTS.</li>
+						<li>
+							The neural network proposed does not have a very complex design since it has only <b>3 layers</b> and the results obtained have been <b>very satisfactory</b> even with a
+							<b>small dataset</b>.
+						</li>
+						</ul>
+				</section>
+
+				<section>
+					<div class="sectionIdentifier conclusionsMark">
+						7. Conclusions
+					</div>
+					<h4>7.1. Conclusions</h4>
+					<ul style="margin: auto;">
+						<li>The implementation of an app with a neural network model is a <b>feasible solution</b>. Since it is <b>portable</b> and triage can be performed in a <b>fast way</b>.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>7.2. Future Work</h4>
+					<ul>
+						<li>To expand the triage system to cover all the reasons of consultation that MTS contains.</li>
+						<li>To integrate medical equipment that can measure vital signs to avoid having to be filled manually and to have them in real time.</li>
+						<li>To connect with all departments of the medical center to have everything automated.</li>
+					</ul>
+				</section>
+
+ 				<section id="thanksSection">
+					<div>
+						<h2>Thank you for your attention!</h2>
+						<h5>If you have any questions, ask me without fear!</h5>
+					</div>
+					<div class="bottom">
+						<div class="nameContainer">
+							<img src="lib/images/author.jpg" class="avatarImage animated bounceIn slow" alt="Author"></img>
+							<div class="personDetails">
+								<span class="personName animated fadeInLeft faster">Cristopher Alexis Dávila Urresta</span>
+								<span class="personPosition animated fadeInRight faster">cristopher.d.96@gmail.com</span>
+							</div>
+						</div>
+						<span class="animated bounceIn">
+							<a href="https://github.com/Cralex96" target="_blank">
+								<i class="fab fa-github faa-tada animated githubColor"></i>
+								GitHub
+							</a>
+						</span>
+						<span class="animated bounceIn">
+							<a href="https://www.linkedin.com/in/cristopherdavila/" target="_blank">
+								<i class="fab fa-linkedin faa-tada animated linkedinColor"></i>
+								LinkedIn
+							</a>
+						</span>
+					</div>
+				</section>
+
 			</div>
 		</div>
 
@@ -385,6 +991,7 @@
 						borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
 					}
 				},
+				slideNumber: 'c/t',
 				dependencies: [
 					{ src: 'node_modules/highlight.js/lib/highlight.js' },
 					{

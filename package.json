@@ -44,6 +44,7 @@
   "dependencies": {
     "highlight.js": "^9.18.1",
     "livereload": "^0.9.1",
+    "mathjax": "^3.0.1",
     "reveal-code-focus": "^1.1.0"
   }
 }
