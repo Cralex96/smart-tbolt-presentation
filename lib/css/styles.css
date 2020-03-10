@@ -12,6 +12,18 @@
 	font-family: 'Product Sans', sans-serif !important;
 }
 
+table {
+	margin: 0 !important;
+}
+
+table td {
+	font-size: 2vw !important;
+}
+
+table th {
+	font-size: 2.5vw !important;
+}
+
 img {
 	border: none !important;
 	box-shadow: none !important;
@@ -19,8 +31,12 @@ img {
 
 .imageContainer {
 	position: relative;
-	margin-top: 1em;
-	height: 100%;
+	height: 70%;
+	width: 100%;
+	background-image: url("../images/neural_network_model.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 #level1Percentage,
@@ -31,42 +47,56 @@ img {
 	position: absolute;
 	font-size: 10pt;
 	font-weight: bold;
-	right: 17.1em;
+	right: 1em;
 }
 
 #level1Percentage {
-	top: 9.2em;
+	top: 21%;
 }
 
 #level2Percentage {
-	top: 13.6em;
+	top: 32%;
 }
 
 #level3Percentage {
-	top: 18em;
+	top: 44%;
 }
 
 #level4Percentage {
-	top: 22.4em;
+	top: 55%;
 }
 
 #level5Percentage {
-	top: 26.8em;
+	top: 66%;
 }
 
 .oval {
 	position: absolute;
-	top: 50.5%;
-	right: 3.3%;
+	top: 53.7%;
+	right: 0.5%;
 	z-index: 20;
 	border-radius: 50%;
 	border: 2px solid #E9473D;
-	width: 10%;
+	width: 4%;
 	height: 5%;
+}
+
+.methodologySection p {
+	margin: 0 !important;
+	font-size: 2vw;
+}
+
+.methodologySection li {
+	font-size: 2vw;
+}
+
+h4 {
+	margin-bottom: 1em !important;
 }
 
 h5 {
 	font-size: 24pt;
+	margin-bottom: .8em !important;
 }
 
 h6 {
@@ -151,6 +181,10 @@ h6 {
 	font-size: .7em;
 }
 
+#objectivesSection {
+	justify-content: space-around;
+}
+
 #additionalResultsSection {
 	align-items: flex-start;
 }
@@ -182,8 +216,6 @@ h6 {
 #reasonsForConsultation {
 	width: 80%;
 	text-align: left;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
 }
 
 #traditionalAndModern > thead td {
@@ -244,7 +276,7 @@ h6 {
 	display: flex;
 	position: relative;
 	background-color: aqua;
-	width: 53%;
+	width: 30em;
 	border-radius: 40px;
 	margin: .7rem 0;
 	font-size: .6em;
@@ -271,31 +303,31 @@ h6 {
 }
 
 #item1.agendaItem {
-	margin-left: 4em;
+	margin-left: 5%;
 }
 
 #item2.agendaItem {
-	margin-left: 7em;
+	margin-left: 10%;
 }
 
 #item3.agendaItem {
-	margin-left: 10em;
+	margin-left: 15%;
 }
 
 #item4.agendaItem {
-	margin-left: 13em;
+	margin-left: 20%;
 }
 
 #item5.agendaItem {
-	margin-left: 16em;
+	margin-left: 25%;
 }
 
 #item6.agendaItem {
-	margin-left: 19em;
+	margin-left: 30%;
 }
 
 #item7.agendaItem {
-	margin-left: 22em;
+	margin-left: 35%;
 }
 
 .fixedTitle {
@@ -341,7 +373,7 @@ h6 {
 #generalObjective {
 	text-align: left;
 	font-size: 24pt;
-	margin-bottom: 3em;
+	/* margin-bottom: 3em; */
 }
 
 #generalObjective b {
@@ -438,6 +470,7 @@ h6 {
 
 #tensorflowCharacteristics > li {
 	list-style: none;
+	font-size: 2vw;
 }
 
 #computerCharacteristics td {
@@ -556,4 +589,32 @@ h6 {
 	justify-content: space-around;
 	width: 100%;
 	margin: auto;
+}
+
+#datasetDescription {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.justify-content-around {
+	justify-content: space-around !important;
+}
+
+.w-100 {
+	width: 100% !important;
+}
+
+.align-items-center {
+	align-items: center !important;
+}
+
+#mtsLogo {
+	height: 15vh;
+	width: 20vw;
+	margin: 0 !important;
 }

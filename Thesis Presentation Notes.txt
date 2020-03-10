@@ -36,14 +36,12 @@ Native App Performance: Contrary to the approach of most cross-platform framewor
 Flutter application is built directly into the machine code, which eliminates any performance bugs of the interpretation process.
 
 
-
-
 DATASET: anadir el numero de pacientes, especificar mejor. Anadir porcentajes de test data y training data
-22: Training framework
+22: Training framework  --  DONE
 23: Mover titulo
-24: Mobile Application framework
+24: Mobile Application framework  --  DONE
 27: Organizar
 Resaltar numero de tests
 31 y 33: Anadir cuadrado
-quitar grafica execution time
+quitar grafica execution time  --  DONE
 39: Cambiar color general conclusion y poner icono foco
